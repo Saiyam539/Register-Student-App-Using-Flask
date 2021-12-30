@@ -1,0 +1,58 @@
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  form input {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+  }
+  .button{
+    position: absolute;
+    right: 0;
+  }
+</style>
+{% include 'base.html' %}
+{% block body %}
+<form class="d-flex">
+  <input class="form-control me-2" onkeyup="search_animal()" id="search" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+{% if student|length==0 %}
+<div class="alert alert-dark m-3" role="alert">
+  <h4>No students registered yet!!</h4>
+</div>
+{% endif %}
+
+{% for students in student %}
+<div class="alert alert-dark m-3 student" role="alert">
+  <h5>{{loop.index}}. {{students.number}} - {{students.name}}</h5>
+  <a href="/details/{{students.sno}}">More Information</a>
+  <a href="/delete/{{students.sno}}"><button type="button" class="btn btn-secondary button">Delete Student</button></a>
+</div>
+{% endfor %}
+{% endblock body %}
+<script>
+  function search_animal() {
+	let input = document.getElementById('search').value
+	input=input.toLowerCase();
+	let x = document.getElementsByClassName('student');
+  console.log("Done")
+	
+	for (i = 0; i < x.length; i++) {
+		if (!x[i].innerHTML.toLowerCase().includes(input)) {
+			x[i].style.display="none";
+		}
+		else {
+			x[i].style.display="list-item";				
+		}
+	}
+}
+</script>

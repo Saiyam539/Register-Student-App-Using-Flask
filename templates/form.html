@@ -1,0 +1,27 @@
+<style>
+    form{
+        margin: 20px;
+    }
+</style>
+{% extends 'base.html' %}
+{% block body %}
+<form method="post" action="form">
+    <div class="mb-3">
+        <label for="text" class="form-label">Admission number</label>
+        <input type="text" class="form-control" name="number" id="number">
+    </div>
+    <div class="mb-3">
+        <label for="text" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" id="name">
+    </div>
+    <div class="mb-3">
+        <label for="text" class="form-label">Class</label>
+        <input type="text" class="form-control" name="class" id="class">
+    </div>
+    <div class="mb-3">
+        <label for="text" class="form-label">Roll Number</label>
+        <input type="text" class="form-control" name="roll_no" id="roll_no">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock body %}

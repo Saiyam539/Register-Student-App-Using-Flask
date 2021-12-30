@@ -1,0 +1,22 @@
+<style>
+    form {
+        margin: 20px;
+    }
+</style>
+{% extends 'base.html' %}
+{% block body %}
+<h3>Student Details</h3>
+<div class="alert alert-dark m-3" role="alert">
+    <h4>Admission number- {{student.number}}</h4>
+  </div>
+  <div class="alert alert-dark m-3" role="alert">
+    <h4>Name- {{student.name}}</h4>
+  </div>
+  <div class="alert alert-dark m-3" role="alert">
+    <h4>Class- {{student.classes}}</h4>
+  </div>
+
+  <div class="alert alert-dark m-3" role="alert">
+    <h4>Roll Number- {{student.roll_no}}</h4>
+  </div>
+{% endblock body %}

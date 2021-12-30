@@ -1,0 +1,18 @@
+.container {
+    height: 100%;
+}
+.container_2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.container_2 .box{
+    margin: 10px;
+}
+
+footer{
+    display: none;
+}

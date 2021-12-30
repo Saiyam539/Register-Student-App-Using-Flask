@@ -1,0 +1,41 @@
+{% include 'base.html' %}
+{% block body %}
+    <div class="container ">
+        <h1>Register-Students.com</h1>
+        <p>Welcome to the Register-Students.com. Here you can manage all the students in your school/collage. This website will let you know the details of all your students. You can add the details of a student and can see the details of all student at once.</p>
+            <button type="button" class="btn btn-secondary m-3"><a href="{{ url_for('forms')}}">Register Students</a></button>
+            <button type="button" class="btn btn-secondary"><a href="{{ url_for('list')}}">List Of Students</a></button>
+
+    </div>
+
+    <div class="container_2">
+        <div class="box">
+            <h5>Register your students</h5>
+            <p>You can register the details of your students here. Just click on the <b>Register-Students</b> button above and fill the details of a student.</p>
+        </div>
+        <div class="box">
+            <h5>Make all details safe</h5>
+            <p>This website is fully secure and we will keep all the details of your students safe and secure. Freely upload details on this website.</p>
+        </div>
+        <div class="box">
+            <h5>Easy access to details</h5>
+            <p>After uploading the details of your students you can check the details in the future. Just click on <b>List of students</b> button.</p>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <footer>
+        <h4>Copyright © 2021-2022 Register-Students.com</h4>
+    </footer>
+{% endblock body %}
